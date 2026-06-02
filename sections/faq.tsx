@@ -45,16 +45,69 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-40 px-6 md:px-16 overflow-hidden">
-
+    <section
+      id="faq"
+      className="
+        relative
+        overflow-hidden
+        py-24
+        md:py-40
+        px-4
+        sm:px-6
+        md:px-16
+      "
+    >
       {/* BACKGROUND GLOW */}
 
-      <div className="absolute top-0 left-[-200px] w-[500px] h-[500px] rounded-full bg-blue-400/10 blur-[140px]" />
+      <div
+        className="
+          absolute
+          top-0
+          left-[-120px]
+          md:left-[-200px]
+          w-[280px]
+          h-[280px]
+          md:w-[500px]
+          md:h-[500px]
+          rounded-full
+          bg-blue-400/10
+          blur-[100px]
+          md:blur-[140px]
+        "
+      />
 
-      <div className="absolute bottom-0 right-[-200px] w-[500px] h-[500px] rounded-full bg-cyan-400/10 blur-[140px]" />
+      <div
+        className="
+          absolute
+          bottom-0
+          right-[-120px]
+          md:right-[-200px]
+          w-[280px]
+          h-[280px]
+          md:w-[500px]
+          md:h-[500px]
+          rounded-full
+          bg-cyan-400/10
+          blur-[100px]
+          md:blur-[140px]
+        "
+      />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-[420px_1fr] gap-20">
+      {/* CONTAINER */}
 
+      <div
+        className="
+          relative
+          z-10
+          max-w-7xl
+          mx-auto
+          grid
+          lg:grid-cols-[420px_1fr]
+          gap-12
+          lg:gap-20
+          items-start
+        "
+      >
         {/* LEFT SIDE */}
 
         <motion.div
@@ -72,9 +125,13 @@ export default function FAQ() {
           viewport={{
             once: true,
           }}
-          className="sticky top-32 h-fit"
+          className="
+            relative
+            lg:sticky
+            lg:top-32
+            h-fit
+          "
         >
-
           <div
             className="
               inline-flex
@@ -87,7 +144,8 @@ export default function FAQ() {
               border-blue-200
               bg-white/70
               backdrop-blur-xl
-              text-xs
+              text-[10px]
+              sm:text-xs
               font-bold
               tracking-[0.25em]
               text-blue-700
@@ -98,13 +156,16 @@ export default function FAQ() {
 
           <h2
             className="
-              mt-8
-              text-5xl
+              mt-6
+              md:mt-8
+              text-4xl
+              sm:text-5xl
               md:text-7xl
               font-black
               tracking-[-0.06em]
               leading-[0.92]
               text-[#0f172a]
+              break-words
             "
           >
             Preguntas
@@ -126,9 +187,11 @@ export default function FAQ() {
 
           <p
             className="
-              mt-8
+              mt-6
+              md:mt-8
               text-zinc-600
-              text-lg
+              text-base
+              sm:text-lg
               leading-relaxed
               max-w-md
             "
@@ -140,8 +203,7 @@ export default function FAQ() {
 
         {/* FAQ LIST */}
 
-        <div className="flex flex-col gap-6">
-
+        <div className="flex flex-col gap-5 sm:gap-6">
           {faqItems.map((item, index) => {
             const isOpen = active === index;
 
@@ -165,7 +227,8 @@ export default function FAQ() {
                 className="
                   group
                   overflow-hidden
-                  rounded-[32px]
+                  rounded-[24px]
+                  md:rounded-[32px]
                   border
                   border-white/40
                   bg-white/60
@@ -176,7 +239,6 @@ export default function FAQ() {
                   duration-500
                 "
               >
-
                 {/* QUESTION */}
 
                 <button
@@ -186,18 +248,20 @@ export default function FAQ() {
                     flex
                     items-center
                     justify-between
-                    gap-6
-                    px-8
-                    py-8
+                    gap-4
+                    sm:gap-6
+                    px-5
+                    sm:px-8
+                    py-5
+                    sm:py-8
                     text-left
                   "
                 >
-
-                  <div>
-
+                  <div className="min-w-0 flex-1">
                     <p
                       className="
-                        text-xs
+                        text-[10px]
+                        sm:text-xs
                         font-bold
                         tracking-[0.2em]
                         text-blue-500
@@ -209,12 +273,15 @@ export default function FAQ() {
 
                     <h3
                       className="
-                        mt-3
-                        text-2xl
+                        mt-2
+                        sm:mt-3
+                        text-lg
+                        sm:text-2xl
                         md:text-3xl
                         font-black
                         leading-tight
                         text-[#0f172a]
+                        break-words
                       "
                     >
                       {item.question}
@@ -226,8 +293,10 @@ export default function FAQ() {
                       flex
                       items-center
                       justify-center
-                      w-14
-                      h-14
+                      w-11
+                      h-11
+                      sm:w-14
+                      sm:h-14
                       rounded-full
                       bg-gradient-to-br
                       from-blue-500
@@ -238,9 +307,9 @@ export default function FAQ() {
                     "
                   >
                     {isOpen ? (
-                      <Minus size={20} />
+                      <Minus size={18} />
                     ) : (
-                      <Plus size={20} />
+                      <Plus size={18} />
                     )}
                   </div>
                 </button>
@@ -248,7 +317,6 @@ export default function FAQ() {
                 {/* ANSWER */}
 
                 <AnimatePresence>
-
                   {isOpen && (
                     <motion.div
                       initial={{
@@ -267,13 +335,21 @@ export default function FAQ() {
                         duration: 0.35,
                       }}
                     >
-
-                      <div className="px-8 pb-8 pr-20">
-
+                      <div
+                        className="
+                          px-5
+                          sm:px-8
+                          pb-5
+                          sm:pb-8
+                          pr-5
+                          sm:pr-20
+                        "
+                      >
                         <p
                           className="
                             text-zinc-600
-                            text-lg
+                            text-base
+                            sm:text-lg
                             leading-relaxed
                           "
                         >
@@ -282,7 +358,6 @@ export default function FAQ() {
                       </div>
                     </motion.div>
                   )}
-
                 </AnimatePresence>
               </motion.div>
             );
