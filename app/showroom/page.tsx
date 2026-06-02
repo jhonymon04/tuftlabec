@@ -34,7 +34,7 @@ const rugs = [
   {
     title: "RGB Temple",
     category: "Gaming",
-    image: "/images/gaming2.jpg",
+    image: "/images/gaming.jpg",
     size: "small",
     slug: "rgb-temple",
     description:
@@ -52,7 +52,7 @@ const rugs = [
   {
     title: "Kawaii Night",
     category: "Anime",
-    image: "/images/anime2.jpg",
+    image: "/images/anime.jpg",
     size: "vertical",
     slug: "kawaii-night",
     description:
@@ -67,33 +67,7 @@ const rugs = [
     description:
       "Para los amantes del diseño nórdico. Tonos pastel y formas fluidas que aportan calma y sofisticación a cualquier estudio u oficina en casa.",
   },
-  {
-    title: "Nordic Space",
-    category: "Minimal",
-    image: "/images/minimal2.jpg",
-    size: "horizontal",
-    slug: "nordic-space",
-    description:
-      "Minimalismo puro. Una alfombra que no compite con tus muebles, sino que los abraza y unifica el espacio visualmente.",
-  },
-  {
-    title: "Color Collapse",
-    category: "Abstract",
-    image: "/images/abstract.jpg",
-    size: "horizontal",
-    slug: "color-collapse",
-    description:
-      "Una explosión controlada de creatividad. Este diseño abstracto es una obra de arte para el suelo, hecha a mano hilo por hilo.",
-  },
-  {
-    title: "Dream Shapes",
-    category: "Abstract",
-    image: "/images/abstract2.jpg",
-    size: "small",
-    slug: "dream-shapes",
-    description:
-      "Formas orgánicas y colores de ensueño que invitan a la relajación. Un toque moderno e irregular que rompe con la monotonía.",
-  },
+
   {
     title: "Studio Piece",
     category: "Custom",
@@ -106,7 +80,7 @@ const rugs = [
   {
     title: "Collector Edition",
     category: "Custom",
-    image: "/images/custom2.jpg",
+    image: "/images/custom.jpg",
     size: "small",
     slug: "collector-edition",
     description:
@@ -123,7 +97,7 @@ export default function ShowroomPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#f7f9fc] text-[#0f172a]">
-      {/* BACKGROUND EFFECTS */}
+      {/* BACKGROUND */}
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -438,7 +412,7 @@ export default function ShowroomPage() {
                         shadow-lg
                       "
                     >
-                      Diseñar Rug
+                      Diseñar
                     </Link>
                   </div>
                 </motion.div>
@@ -1052,7 +1026,7 @@ export default function ShowroomPage() {
                   {/* CTA */}
 
                   <a
-                    href={`https://wa.me/593999999999?text=${encodeURIComponent(
+                    href={`https://wa.me/593983229662?text=${encodeURIComponent(
                       `¡Hola! Me interesa el diseño "${selectedRug.title}" de su Showroom. ¿Podrían darme más información?`
                     )}`}
                     target="_blank"
